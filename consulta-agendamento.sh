@@ -38,7 +38,7 @@ CRIPT_CPF=`request_cripto $CPF`
 CRIPT_DT_NASCIMENTO=`request_cripto $DT_NASCIMENTO`
 
 DADOS=`request_cadastro $CRIPT_CPF $CRIPT_DT_NASCIMENTO`
-DADOS=""
+
 if [ "$DADOS" == "" ] ; then
 	echo "CPF ou Data de Nascimento inválidos!"
 	exit 1
