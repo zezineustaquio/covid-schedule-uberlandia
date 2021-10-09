@@ -53,6 +53,9 @@ print_dose () {
 			if [ "$SITUACAO" == "V" ] ; then
 				SITUACAO=$F_GREEN$F_BOLD"Vacinado"$F_RESET
 			fi
+			if [ "$SITUACAO" == "A" ] ; then
+				SITUACAO=$F_GREEN$F_BLINK"Aguardando comparecimento"$F_RESET
+			fi
 			echo -e "Situação: $SITUACAO"
 
 			echo -e $F_REVERSE
