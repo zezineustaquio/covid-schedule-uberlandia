@@ -25,12 +25,12 @@ request_cripto () {
 }
 
 request_cadastro () {
-	local ACAO='$2y$10$YOmgjIaHt8iw3xSMAZcrr.iDykFF61LmIFVitE/ZMWCIF40vzS.K.'
+	local ACAO='busca-cpf-data-nascimento'
 	echo `curl -XGET -s "https://agendamentosaude.uberlandia.mg.gov.br/rest.php?acao=$ACAO&cpf=$1&dnasc=$2"`
 }
 
 request_dose () {
-	local ACAO='$2y$10$8TMxYXS5mOeOe0KSze9b2ueYptljwPiwDLaaV1spQCCo7FbnaZ9.6'
+	local ACAO='busca-agendamento-de-dose'
 	echo `curl -XGET -s "https://agendamentosaude.uberlandia.mg.gov.br/rest.php?acao=$ACAO&codigo=$1&dose=$2"`
 }
 
